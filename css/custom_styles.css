@@ -1,0 +1,191 @@
+.body {
+    background-image: url('img/background-body.jpg');
+}
+
+.nav-bar {
+    background-color: rgba(0, 0, 0, 0.555) !important;
+}
+
+.navbar-nav {
+    display: flex;
+    /* Mengaktifkan Flexbox */
+    justify-content: flex-start;
+    /* Untuk posisi normal pada layar besar */
+    align-items: center;
+    /* Mengatur semua item di tengah secara vertikal */
+}
+
+.navbar-nav a {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    margin-left: 50px;
+    /* Jarak antara tautan */
+}
+
+.carousel-caption h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 50px;
+}
+.img-fluid video{
+    height: 500px;
+}
+
+.counter-facts {
+    position: relative;
+    background-image: url('img/background-body.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.counter-facts::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(3, 3, 3, 0.5);
+    /* Warna putih dengan transparansi */
+    z-index: 1;
+    /* Pastikan di bawah konten */
+}
+
+.counter-facts .container {
+    position: relative;
+    /* Pastikan konten berada di atas lapisan */
+    z-index: 2;
+    /* Konten di atas lapisan background */
+}
+
+.counter-icon {
+    display: flex;
+    /* Gunakan flexbox untuk memusatkan konten */
+    justify-content: center;
+    /* Pusatkan secara horizontal */
+    align-items: center;
+    /* Pusatkan secara vertikal */
+    width: 100%;
+    /* Mengatur lebar penuh */
+    height: 100px;
+    /* Atur tinggi sesuai kebutuhan */
+    overflow: hidden;
+    /* Menyembunyikan bagian gambar yang keluar dari batas */
+}
+
+.counter-icon img {
+    width: 80%;
+    /* Mengatur lebar gambar menjadi penuh */
+    height: auto;
+    /* Menjaga rasio aspek gambar */
+    max-height: 100%;
+    /* Batasi tinggi gambar */
+    object-fit: cover;
+    /* Memastikan gambar mengisi area tanpa distorsi */
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        justify-content: center;
+        /* Posisi di tengah untuk layar kecil */
+        flex-wrap: wrap;
+        /* Memungkinkan elemen membungkus jika diperlukan */
+    }
+
+    .navbar-nav a {
+        margin: 0 10px;
+        /* Jarak horizontal antara tautan */
+        text-align: center;
+        /* Teks tautan akan terpusat */
+    }
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .carousel-caption {
+        max-height: 300px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.8rem;
+        /* Ukuran font lebih kecil untuk layar tablet */
+    }
+
+    .carousel-caption p {
+        font-size: 5px;
+    }
+
+    .carousel-caption a {
+        font-size: 1rem;
+        padding: 10px 20px;
+        /* Padding lebih kecil untuk tombol */
+    }
+
+    #dashboard {
+        height: 350px;
+    }
+}
+
+.row.text-center.mt-5 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col-lg-4,
+.col-md-6 {
+    display: flex;
+    align-items: stretch;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    width: 400px;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-text {
+    margin-bottom: 20px;
+}
+
+.card-logo {
+    max-width: 100px;
+    /* Sesuaikan dengan ukuran logo */
+    height: auto;
+    margin-bottom: 15px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin: 0 auto;
+    }
+}
+
+.col-12 {
+    margin-bottom: 50px;
+}
+
+
+@media (max-width: 768px) {
+    .footer .row {
+        flex-direction: column;
+        align-items: center;
+        /* Mengatur agar elemen di tengah */
+    }
+
+    .footer .col-md-3 {
+        width: 100%;
+        /* Membuat setiap kolom memenuhi lebar layar */
+        text-align: center;
+        /* Mengatur teks menjadi center */
+    }
+}
